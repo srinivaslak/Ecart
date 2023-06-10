@@ -1,0 +1,150 @@
+<!doctype html>
+{% load staticfiles %}
+<html lang="zxx">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!--::header part start::-->
+<header class="main_menu home_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+
+
+                    <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'ahome' %}">Home</a>
+                            </li>
+
+                             <li class="nav-item">
+                                <a class="nav-link" href="{% url 'viewproducts' %}">View Products</a>
+                            </li>
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'addproduct' %}">Upload-Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'purchase' %}">Purchase-History</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav> </div>
+            </nav>
+        </div>
+    </div>
+    </div>
+
+</header>
+
+<!-- Header part end-->
+
+
+<!-- feature_part start-->
+<!--================login_part Area =================-->
+<section class="login_part padding_top">
+    <div class="container">
+        <div class="row align-items-center">
+             <div class="col-sm-3">
+
+              </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_form">
+                    <div class="login_part_form_iner">
+                        <h3>Welcome Back Admin <br>
+                            Products Upload Form</h3>
+                        <form class="row contact_form" method="post"  enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="col-md-12 form-group p_star">
+                                <input type="text" class="form-control" id="name" name="pname" value=""
+                                       placeholder="Product Name">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="text" class="form-control" id="name" name="pcat" value=""
+                                       placeholder="Product Category">
+                            </div>
+
+                            <div class="col-md-12 form-group p_star">
+                                <input type="text" class="form-control" id="password" name="pquality" value=""
+                                       placeholder="Product Quality">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="text" class="form-control" id="name" name="pdec" value=""
+                                       placeholder="Product Description">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="text" class="form-control" id="name" name="pcost" value=""
+                                       placeholder="Product Price">
+                            </div>
+
+                            <div class="col-md-12 form-group p_star">
+                                <input type="file" class="form-control" id="name" name="pimage" value=""
+                                       placeholder="Product Image">
+                            </div>
+                            <div class="col-md-12 form-group">
+
+                                <button type="submit" value="submit" class="btn btn-success" style="width: 50%">
+                                    UPLOAD
+                                </button>
+                                <button type="reset" value="Reset" class="btn_3" style="width: 50%">
+                                    CLEAR
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                    <div class="col-sm-3">
+
+              </div>
+        </div>
+    </div>
+</section>
+<!--================login_part end =================-->
+
+
+<!-- awesome_shop part start-->
+
+
+</div>
+<!--
+<div class="copyright_part">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copyright_text">
+                    <center>
+                        <P>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i>
+                            by <a href="#" target="_blank">VIGNAN-Batch-3</a>
+                        </P>
+                        <p><i><b>By L.V.SrinivasRao</b></i></p></center>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</footer>-->
+<!--::footer_part end::-->
+
+<!-- jquery plugins here-->
+
+</body>
+
+</html>
